@@ -45,7 +45,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="{{ route('admin.dashboard')}}">
+            <a class="nav-link" href="{{ route('agent.dashboard')}}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Tableau de bord</span></a>
         </li>
@@ -68,28 +68,13 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Gestion de Voiture</h6>
-                    <a class="collapse-item" href="{{ route('admin.ajout')}}">Ajouter une Voitureo</a>
-                    <a class="collapse-item" href="{{ route('admin.liste') }}">Liste de Voiture</a>
-                    <a class="collapse-item" href="{{ route('admin.listevente') }}">Liste de location</a>
+                    <a class="collapse-item" href="{{ route('agent.ajout')}}">Ajouter une Voitureo</a>
+                    <a class="collapse-item" href="{{ route('agent.liste') }}">Liste de Voiture</a>
+                    <a class="collapse-item" href="{{ route('agent.listevente') }}">Liste de location</a>
                 </div>
             </div>
         </li>
 
-        <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-               aria-expanded="true" aria-controls="collapseUtilities">
-                <i class="fas fa-fw fa-wrench"></i>
-                <span>Utilisateurs</span>
-            </a>
-            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                 data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Gere les utilisateurs:</h6>
-                    <a class="collapse-item" href="{{ route('admin.personnel')}}">Personnel</a>
-                </div>
-            </div>
-        </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider">
@@ -101,7 +86,7 @@
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('admin.reservation') }}">
+            <a class="nav-link" href="{{ route('agent.reservation') }}">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Reserver</span></a>
         </li>
@@ -131,8 +116,8 @@
         @yield('listevente')
         @yield('ajout')
         @yield('form')
-        @yield('personnel')
-        @yield('modifier')
+        @yield('reservation')
+
 
         <!-- End of Main Content -->
 

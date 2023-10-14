@@ -10,7 +10,7 @@
 
         <!--font-family-->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <!-- title of site -->
         <title>Furniture</title>
 
@@ -296,167 +296,28 @@
 				</div><!--/.section-header-->
 				<div class="new-arrivals-content">
 					<div class="row">
+                        @foreach($derniersMontres as $car)
 						<div class="col-md-3 col-sm-4">
 							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="assets/images/collection/arrivals1.jpg" alt="new-arrivals images">
+								<div class="single-new-arrival-bg" style="cursor: pointer">
+									<img src="{{ Storage::url($car->image) }}" alt="new-arrivals images">
 									<div class="single-new-arrival-bg-overlay"></div>
 									<div class="sale bg-1">
 										<p>Louer</p>
 									</div>
-									<div class="new-arrival-cart">
-
-										<p class="arrival-review pull-right">
-											<span> Voir plus</span>
-											<span class="fa fa-arrow-right"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">Benz</a></h4>
-								<p class="arrival-product-price">500000</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="assets/images/collection/arrivals2.jpg" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-									<div class="sale bg-1">
-										<p>Louer</p>
-									</div>
-									<div class="new-arrival-cart">
-
-										<p class="arrival-review pull-right">
-											<span>Voir plus</span>
-											<span class="fa fa-arrow-right"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">Corrola</a></h4>
-								<p class="arrival-product-price">350000</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="assets/images/collection/arrivals3.jpg" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-                                    <div class="sale bg-1">
-                                        <p>Louer</p>
+                                    <div class="new-arrival-cart">
+                                        <p>
+                                            <span class="lnr lnr-cart"></span>
+                                            <a href="#">Ajouter <span>au </span>panier</a>
+                                        </p>
+                                        <p class="arrival-review pull-right">
+                                            <i class='bx bx-right-arrow-alt'></i>
+                                        </p>
                                     </div>
-									<div class="new-arrival-cart">
-
-										<p class="arrival-review pull-right">
-											<span>Voir plus</span>
-											<span class="fa fa-arrow-right"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">Range rover</a></h4>
-								<p class="arrival-product-price">450000</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="assets/images/collection/arrivals4.jpg" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-									<div class="sale bg-1">
-										<p>Louer</p>
-									</div>
-									<div class="new-arrival-cart">
-
-										<p class="arrival-review pull-right">
-											<span>Voir plus</span>
-											<span class="fa fa-arrow-right"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">Nissan</a></h4>
-								<p class="arrival-product-price">350000</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="assets/images/collection/arrivals5.jpg" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-                                    <div class="sale bg-2">
-                                        <p>Louer</p>
-                                    </div>
-									<div class="new-arrival-cart">
-
-										<p class="arrival-review pull-right">
-											<span>Voir plus</span>
-											<span class="fa fa-arrow-right"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">Rolls royce</a></h4>
-								<p class="arrival-product-price">800000</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="assets/images/collection/arrivals6.jpg" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-									<div class="sale bg-2">
-										<p>Louer</p>
-									</div>
-									<div class="new-arrival-cart">
-
-										<p class="arrival-review pull-right">
-											<span>Voir plus</span>
-											<span class="fa fa-arrow-right"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">Bugatti</a></h4>
-								<p class="arrival-product-price">750000</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="assets/images/collection/arrivals7.jpg" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-									<div class="sale bg-2">
-										<p>Louer</p>
-									</div>
-									<div class="new-arrival-cart">
-
-										<p class="arrival-review pull-right">
-											<span>Voir plus</span>
-											<span class="fa fa-arrow-right"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">Lamborghini</a></h4>
-								<p class="arrival-product-price">700000</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="assets/images/collection/arrivals8.jpg" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-                                    <div class="sale bg-2">
-                                        <p>Louer</p>
-                                    </div>
-									<div class="new-arrival-cart">
-
-										<p class="arrival-review pull-right">
-											<span>Voir plus</span>
-											<span class="fa fa-arrow-right"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">Hyundai</a></h4>
-								<p class="arrival-product-price">500000</p>
-							</div>
-						</div>
-					</div>
+						        </div>
+                            </div>
+                        </div>
+                        @endforeach
 				</div>
 			</div><!--/.container-->
 

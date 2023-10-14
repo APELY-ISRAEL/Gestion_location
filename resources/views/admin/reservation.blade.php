@@ -1,5 +1,5 @@
 @extends('admin.dashbord')
-@section('liste')
+@section('reservation')
     <div id="content">
 
         <!-- Topbar -->
@@ -228,77 +228,7 @@
                                     <th>Action</th>
                                 </tr>
                             </tfoot>
-                            <tbody>
-                                @foreach ($cars as $car)
-                                <tr style="text-align: center">
-                                    <td class="flex flex-row-reverse text-sm" >
-                                        <!-- Avatar with inset shadow -->
-                                        <div  style="display: flex; flex-direction: row; font-size: small">
-                                            <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block" style="position: relative;
-                                             display: none; width: 2rem/* 32px */; margin-right: 0.75rem/* 12px */;border-radius: 9999px; @media (min-width: 768px) {
-    .md\:block {
-        display: block;
-    }
-}">
-
-                                                <img class="object-cover w-full h-full rounded-full"
-                                                     src="{{ Storage::url($car->image) }}" alt="" loading="lazy" />
-                                                <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true">
-                                                </div>
-                                            </div>
-                                        <div>
-                                            <p class="font-semibold">
-                                                {{ $car->marque }}
-                                            </p>
-                                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                                                {{ $car->annee }}
-                                            </p>
-                                        </div>
-                                        </div>
-
-                                </td>
-                                    <td>{{ $car->modele }}</td>
-                                    <td>{{ $car->carburant }}</td>
-                                    <td>{{ $car->marticule }}</td>
-                                    <td>{{ $car->prix }}</td>
-                                    <td>
-                                        <div class="flex items-center space-x-4 text-sm" style="display:flex; justify-content: center; gap: 2rem;">
-                                        <a href="{{route('admin.form', $car->id)}}">
-                                            <button style="background-color: #4D72DF"
-                                                class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                                                aria-label="Edit">
-                                                <i class='bx bxs-edit-alt' style="color: blue"></i>
-
-                                            </button>
-                                        </a>
-                                        <form action="{{ route('cars.destroy', $car->id)}}" method="POST"
-                                            onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?')">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit"   style="background-color:red"
-                                                class="flex  items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                                                aria-label="Delete">
-                                                <i class='bx bx-trash' ></i>
-
-                                            </button>
-
-                                        </form>
-                                            <a href="#">
-                                                <button style="background-color: grey"
-                                                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                                                        aria-label="Edit">
-                                                    <i class='bx bxs-cart-download'  style="color: black"></i>
-
-                                                </button>
-                                            </a>
-
-
-
-                                    </div>
-                                </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
+                            
                         </table>
                     </div>
                 </div>

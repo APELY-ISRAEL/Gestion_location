@@ -1,4 +1,4 @@
-@extends('admin.dashbord')
+@extends('agent.dashbord')
 @section('main')
     <div id="content">
         <!-- Topbar -->

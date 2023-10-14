@@ -1,4 +1,4 @@
-@extends('admin.dashbord')
+@extends('agent.dashbord')
 @section('liste')
     <div id="content">
 
@@ -263,7 +263,7 @@
                                     <td>{{ $car->prix }}</td>
                                     <td>
                                         <div class="flex items-center space-x-4 text-sm" style="display:flex; justify-content: center; gap: 2rem;">
-                                        <a href="{{route('admin.form', $car->id)}}">
+                                        <a href="{{route('agent.edits', $car->id)}}">
                                             <button style="background-color: #4D72DF"
                                                 class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                                                 aria-label="Edit">

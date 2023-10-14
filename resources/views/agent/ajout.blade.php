@@ -1,4 +1,4 @@
-@extends('admin.dashbord')
+@extends('agent.dashbord')
 @section('ajout')
     <div class="container">
 

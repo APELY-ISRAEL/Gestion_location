@@ -1,5 +1,5 @@
 @extends('admin.dashbord')
-@section('liste')
+@section('personnel')
     <div id="content">
 
         <!-- Topbar -->
@@ -16,7 +16,7 @@
             <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                 <div class="input-group">
                     <input type="text" class="form-control bg-light border-0 small" placeholder="Recherche"
-                        aria-label="Search" aria-describedby="basic-addon2">
+                           aria-label="Search" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="button">
                             <i class="fas fa-search fa-sm"></i>
@@ -31,16 +31,16 @@
                 <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                 <li class="nav-item dropdown no-arrow d-sm-none">
                     <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-search fa-fw"></i>
                     </a>
                     <!-- Dropdown - Messages -->
                     <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                        aria-labelledby="searchDropdown">
+                         aria-labelledby="searchDropdown">
                         <form class="form-inline mr-auto w-100 navbar-search">
                             <div class="input-group">
                                 <input type="text" class="form-control bg-light border-0 small"
-                                    placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                       placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-search fa-sm"></i>
@@ -54,14 +54,14 @@
                 <!-- Nav Item - Alerts -->
                 <li class="nav-item dropdown no-arrow mx-1">
                     <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-bell fa-fw"></i>
                         <!-- Counter - Alerts -->
                         <span class="badge badge-danger badge-counter">3+</span>
                     </a>
                     <!-- Dropdown - Alerts -->
                     <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                        aria-labelledby="alertsDropdown">
+                         aria-labelledby="alertsDropdown">
                         <h6 class="dropdown-header">
                             Alerts Center
                         </h6>
@@ -105,14 +105,14 @@
                 <!-- Nav Item - Messages -->
                 <li class="nav-item dropdown no-arrow mx-1">
                     <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-envelope fa-fw"></i>
                         <!-- Counter - Messages -->
                         <span class="badge badge-danger badge-counter">7</span>
                     </a>
                     <!-- Dropdown - Messages -->
                     <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                        aria-labelledby="messagesDropdown">
+                         aria-labelledby="messagesDropdown">
                         <h6 class="dropdown-header">
                             Message Center
                         </h6>
@@ -152,7 +152,7 @@
                         <a class="dropdown-item d-flex align-items-center" href="#">
                             <div class="dropdown-list-image mr-3">
                                 <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                    alt="...">
+                                     alt="...">
                                 <div class="status-indicator bg-success"></div>
                             </div>
                             <div>
@@ -170,13 +170,13 @@
                 <!-- Nav Item - User Information -->
                 <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                         <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                        aria-labelledby="userDropdown">
+                         aria-labelledby="userDropdown">
                         <a class="dropdown-item" href="#">
                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                             Profile
@@ -198,9 +198,8 @@
         <div class="container-fluid">
 
             <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800">LISTE DES VOITURES</h1>
+            <h1 class="h3 mb-2 text-gray-800">LISTE DES UTILISATEURS</h1>
 
-            <!-- DataTales Example -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Les enregistrements</h6>
@@ -209,27 +208,15 @@
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
-                                <tr style="text-align: center">
-                                    <th>Marque</th>
-                                    <th>Modele</th>
-                                    <th>Carburant</th>
-                                    <th>Matricule</th>
-                                    <th>Prix</th>
-                                    <th>Action</th>
-                                </tr>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Action</th>
+                            </tr>
                             </thead>
-                            <tfoot>
-                                <tr style="text-align: center">
-                                    <th>Marque</th>
-                                    <th>Modele</th>
-                                    <th>Carburant</th>
-                                    <th>Matricule</th>
-                                    <th>Prix</th>
-                                    <th>Action</th>
-                                </tr>
-                            </tfoot>
                             <tbody>
-                                @foreach ($cars as $car)
+                            @foreach ($users as $user)
                                 <tr style="text-align: center">
                                     <td class="flex flex-row-reverse text-sm" >
                                         <!-- Avatar with inset shadow -->
@@ -241,71 +228,68 @@
     }
 }">
 
-                                                <img class="object-cover w-full h-full rounded-full"
-                                                     src="{{ Storage::url($car->image) }}" alt="" loading="lazy" />
-                                                <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true">
+                                                <div>
+                                                    <p class="font-semibold">
+                                                        {{ $user->name }}
+                                                    </p>
+
                                                 </div>
                                             </div>
-                                        <div>
-                                            <p class="font-semibold">
-                                                {{ $car->marque }}
-                                            </p>
-                                            <p class="text-xs text-gray-600 dark:text-gray-400">
-                                                {{ $car->annee }}
-                                            </p>
-                                        </div>
                                         </div>
 
-                                </td>
-                                    <td>{{ $car->modele }}</td>
-                                    <td>{{ $car->carburant }}</td>
-                                    <td>{{ $car->marticule }}</td>
-                                    <td>{{ $car->prix }}</td>
+
+
+                                     </td>
+
+                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $user->role }}</td>
                                     <td>
                                         <div class="flex items-center space-x-4 text-sm" style="display:flex; justify-content: center; gap: 2rem;">
-                                        <a href="{{route('admin.form', $car->id)}}">
-                                            <button style="background-color: #4D72DF"
-                                                class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                                                aria-label="Edit">
-                                                <i class='bx bxs-edit-alt' style="color: blue"></i>
-
-                                            </button>
-                                        </a>
-                                        <form action="{{ route('cars.destroy', $car->id)}}" method="POST"
-                                            onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?')">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit"   style="background-color:red"
-                                                class="flex  items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                                                aria-label="Delete">
-                                                <i class='bx bx-trash' ></i>
-
-                                            </button>
-
-                                        </form>
-                                            <a href="#">
-                                                <button style="background-color: grey"
+                                            <a href="{{ route('admin.edite', $user->id)}}">
+                                                <button style="background-color: #4D72DF"
                                                         class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                                                         aria-label="Edit">
-                                                    <i class='bx bxs-cart-download'  style="color: black"></i>
+                                                    <i class='bx bxs-edit-alt' style="color: blue"></i>
 
                                                 </button>
                                             </a>
+                                            <form method="POST" action="{{ route('admin.personnele', $user->id) }}"
+                                                  onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?')">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit"   style="background-color:red"
+                                                        class="flex  items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                                                        aria-label="Delete">
+                                                    <i class='bx bx-trash' ></i>
+
+                                                </button>
+
+                                            </form>
 
 
-
-                                    </div>
-                                </td>
+                                        </div>
+                                    </td>
                                 </tr>
-                                @endforeach
+                            @endforeach
                             </tbody>
+                            <tfoot class="dark:text-gray-200">
+                            <tr>
+                                <th>Nom</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Action</th>
+                            </tr>
+                            </tfoot>
                         </table>
-                    </div>
-                </div>
             </div>
 
         </div>
         <!-- /.container-fluid -->
 
     </div>
+
+
+
+
+
 @endsection

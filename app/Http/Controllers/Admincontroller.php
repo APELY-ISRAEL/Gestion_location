@@ -17,4 +17,15 @@ class Admincontroller extends Controller
         return view('admin.liste');
     }
 
+    public function listevente(){
+        return view('admin.listevente');
+    }
+
+    public function personnel(){
+        return view('admin.personnel');
+    }
+    public function reservation(){
+        return view('admin.reservation');
+    }
+
 }
