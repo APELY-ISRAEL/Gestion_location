@@ -53,6 +53,8 @@
     </head>
 
 	<body>
+
+
 		<!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -95,7 +97,7 @@
 													</div>
 													<button class="btn-cart welcome-add-cart" onclick="window.location.href='#'">
 														<span class="lnr lnr-plus-circle"></span>
-														Ajouter <span>au</span>panier
+														 <span>Reservation</span>
 													</button>
 													<button class="btn-cart welcome-add-cart welcome-more-info" onclick="window.location.href='#'">
 														plus d'information
@@ -138,7 +140,7 @@
 													</div>
 													<button class="btn-cart welcome-add-cart" onclick="window.location.href='#'">
 														<span class="lnr lnr-plus-circle"></span>
-														Ajouter <span>au</span> panier
+														 <span>Reservation</span>
 													</button>
 													<button class="btn-cart welcome-add-cart welcome-more-info" onclick="window.location.href='#'">
 														plus d'information
@@ -181,7 +183,7 @@
 													</div>
 													<button class="btn-cart welcome-add-cart" onclick="window.location.href='#'">
 														<span class="lnr lnr-plus-circle"></span>
-														Ajouter <span>au</span>panier
+                                                        <span>Reservation</span>
 													</button>
 													<button class="btn-cart welcome-add-cart welcome-more-info" onclick="window.location.href='#'">
 														plus d'information
@@ -294,31 +296,40 @@
 				<div class="section-header">
 					<h2>Nouvelles arrivage</h2>
 				</div><!--/.section-header-->
-				<div class="new-arrivals-content">
-					<div class="row">
-                        @foreach($derniersMontres as $car)
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg" style="cursor: pointer">
-									<img src="{{ Storage::url($car->image) }}" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-									<div class="sale bg-1">
-										<p>Louer</p>
-									</div>
-                                    <div class="new-arrival-cart">
-                                        <p>
-                                            <span class="lnr lnr-cart"></span>
-                                            <a href="#">Ajouter <span>au </span>panier</a>
-                                        </p>
-                                        <p class="arrival-review pull-right">
-                                            <i class='bx bx-right-arrow-alt'></i>
-                                        </p>
-                                    </div>
-						        </div>
+
+			<!-- Ajoutez cette balise div à l'extérieur de la boucle foreach pour afficher les détails -->
+            <div class="item-details" style="display: none;">
+                <!-- Les détails de l'élément sélectionné seront affichés ici -->
+            </div>
+
+        <div class="new-arrivals-content">
+            <div class="row">
+                @foreach($derniersMontres as $car)
+                <div class="col-md-3 col-sm-4">
+                    <div class="single-new-arrival">
+                        <div class="single-new-arrival-bg" style="cursor: pointer">
+                            <img src="{{ Storage::url($car->image) }}" alt="new-arrivals images">
+                            <div class="single-new-arrival-bg-overlay"></div>
+                            <div class="sale bg-1">
+                                <p>Louer</p>
+                            </div>
+                            <div class="new-arrival-cart">
+                                <p>
+                                    <span class="lnr lnr-cart"></span>
+                                    <a href="{{ route('information')}}">Voir les données</a>
+Voir les données</a>
+                                    "> <span>Voir plus</span>
+                                </p>
+                                <p class="arrival-review pull-right">
+                                    <i class='bx bx-right-arrow-alt'></i>
+                                </p>
                             </div>
                         </div>
-                        @endforeach
-				</div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
 			</div><!--/.container-->
 
 		</section><!--/.new-arrivals-->
@@ -638,6 +649,8 @@
 
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
+
+
 
     </body>
 

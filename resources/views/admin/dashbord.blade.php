@@ -68,7 +68,7 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Gestion de Voiture</h6>
-                    <a class="collapse-item" href="{{ route('admin.ajout')}}">Ajouter une Voitureo</a>
+                    <a class="collapse-item" href="{{ route('admin.ajout')}}">Ajouter une Voiture</a>
                     <a class="collapse-item" href="{{ route('admin.liste') }}">Liste de Voiture</a>
                     <a class="collapse-item" href="{{ route('admin.listevente') }}">Liste de location</a>
                 </div>
@@ -133,6 +133,7 @@
         @yield('form')
         @yield('personnel')
         @yield('modifier')
+        @yield('reservation')
 
         <!-- End of Main Content -->
 

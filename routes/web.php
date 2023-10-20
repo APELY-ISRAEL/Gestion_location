@@ -3,6 +3,7 @@
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\Admincontroller;
@@ -28,11 +29,20 @@ Route::get('/', [CarsController::class, 'derniersEnregistrements'])->name('home'
 //     return view('index');
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/information', function () {
+    return view('info');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+  //  Route::get('/cars/{id}/information', [ReservationController::class, 'getData'])->name('information');
+ //  Route::get('/user-data', [ReservationController::class, 'getDataUser'])->name('information');
+
+  Route::get('/information', [ReservationController::class, 'getData'])->name('information');
+
+
 });
 
 Route::middleware(['auth','admin'])->group(function () {
