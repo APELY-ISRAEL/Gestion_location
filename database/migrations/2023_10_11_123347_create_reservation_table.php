@@ -13,10 +13,13 @@ return new class extends Migration
     {
         Schema::create('reservation', function (Blueprint $table) {
             $table->id();
+            $table->string('nom');
+            $table->string('prenom');
             $table->string('adresse');
-            $table->integer('numero');
-            $table->integer('duration');
-            $table->integer('date_arr');
+            $table->string('telephone');
+            $table->string('numcarte');
+            $table->integer('debut');
+             $table->string('fin');
             $table->string('image')->nullable();
             $table->timestamps();
         });
